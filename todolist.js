@@ -57,7 +57,7 @@ app.post("/", function(request, response) {
 
     } else {
         commonlist.push(taskOfUser);
-        response.redirect("/input");
+        response.redirect("/");
     }
 
 
@@ -68,7 +68,7 @@ app.post("/", function(request, response) {
 
 app.post("/delete", function(request, response) {
     commonlist.pop();
-    response.redirect("/input");
+    response.redirect("/");
 })
 
 
