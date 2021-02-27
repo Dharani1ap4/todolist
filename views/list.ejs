@@ -1,0 +1,35 @@
+<%- include("partials/header"); -%>
+
+    <div class="box" id="heading">
+        <h1>
+            <%=listTitle%>
+        </h1>
+    </div>
+
+
+    <div class="box">
+        <ul>
+            <%for(var i=0; i<task.length; i++){%>
+                <div class="item">
+                    <input type="checkbox">
+                    <p>
+                        <%=task[i]%>
+                    </p>
+                </div>
+                <%}%>
+
+                    <form class="item" action="/" method="POST">
+                        <input type="text" id="task1" name="inputOfUser" placeholder="Enter your Task">
+                        <button name="button" type="submit" value=<%=listTitle%>  >+</button>
+                    </form>
+
+                    <br>
+                    <form class="item" action="/delete" method="POST"><button class="buttondelete" type="submit" name="deletebutton">Delete task</button>
+                    </form>
+        </ul>
+    </div>
+    <script src="todolist.js " charset="utf-8 ">
+    </script>
+
+
+    <%- include("partials/footer"); -%>
